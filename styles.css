@@ -1,0 +1,513 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Varela+Round&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+*
+{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    text-decoration: none;
+}
+
+span{
+    color: rgb(184, 67, 46);
+}
+
+
+h1
+{
+    font-family: 'Varela Round', sans-serif;
+}
+
+h2
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+p
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+a
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* navbar */
+.max-width 
+{
+    padding: 0px 2% 0px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar 
+{
+    width : 100%;
+    padding : 15px 10px;
+    position: fixed;
+    background-color: rgb(184, 67, 46);
+    top: 1;
+    transition: top 0.3s;
+    
+}
+
+.navbar .logo a
+{
+    color: rgb(0, 0, 0);
+    font-size : 35px;
+    font-weight: 600;
+}
+
+.navbar .menu li
+{
+    list-style: none;
+    display: inline-block;
+}
+
+body {
+    background-color: rgb(29, 29, 29);
+}
+
+.navbar .menu li a
+{   
+    color : #fff;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.navbar .menu li a:hover 
+{
+    color: rgb(92, 14, 14);
+}
+
+/* intro*/
+.intro
+{
+    background :  linear-gradient( rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.164) ), url('fond2.jpg') no-repeat center;
+    height:100%;
+    width:100%;
+    display: flex;
+    
+    padding-top: 500px;
+    padding-left: 10%;
+    color : white;
+}
+
+.texte {
+    
+    width: 100%;
+    height: 540px;
+}
+.texte h1
+{
+    text-shadow: 2px 1px 2px black;
+    font-size: 300%;
+}
+
+.texte h2
+{
+    text-shadow: 2px 1px 2px black;
+    font-size: 240%;  
+}
+
+
+h1 span
+{
+    color : slateblue;
+}
+
+/* Bouton */
+
+.intro a 
+{   
+       
+    padding: 10px 30px;  
+    color : rgba(255, 255, 255, 0.4);
+    background:  rgb(49, 49, 49);
+    letter-spacing: 2px;
+    font-size: 18px;
+    transition: 0.6s;
+}
+
+
+
+
+
+.intro a:hover 
+{   
+    color : rgba(255, 255, 255, 1); 
+    background: rgb(184, 67, 46);
+}
+
+
+.button
+{
+    
+    padding-right: 30px;
+    padding-top: 150px;
+}
+
+/* A propos */
+
+.presentation .contenu {
+    padding-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.presentation .contenu .column
+{
+    flex-grow: 1;
+    min-width: 420px;
+}
+
+.presentation .contenu .right img
+{   
+       
+    width: 400px;
+    height: auto;
+    border-radius: 6px;
+}
+
+
+
+
+.presentation .contenu .textIntro{
+    width: 55%;
+    margin-right: 5%;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+
+.presentation .contenu .textIntro span{
+    font-weight: bold;
+}
+
+.presentation .contenu .right{
+    width: 40%;
+}
+
+.presentation .contenu .left{
+    width: 20%;
+    
+}
+
+
+
+.presentation p
+{
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 35px;
+}
+
+
+.presentation
+{
+    
+    color: white;
+    margin: 70px;
+}
+
+.presentation h1
+{
+    text-align: center;
+    
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    padding-bottom: 20px;   
+    
+}
+
+.presentation h2
+{
+    
+    
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    
+    
+}
+
+
+
+.presentation .trait
+{
+    height: 2px;
+    width: 200px;
+    background-color: white;
+    margin : -3px auto;
+}
+
+.presentation span
+{
+    color: rgb(184, 67, 46);
+}
+
+
+
+
+
+/* Experiences */
+
+.competences{
+    
+    
+    margin: 50px;
+}
+
+.competences .textCompetences{
+padding-top: 90px;
+
+}
+
+.competences .titreCompetences .traitvertical{
+
+    padding-top: 80px;
+    height: 30px;
+    width: 2px;
+    background-color: rgb(184, 67, 46);
+    margin : -3px auto;
+
+}
+.competences .titreCompetences {
+    
+    
+    display: flex;
+    justify-content: center;
+    
+}
+
+.competences .titreCompetences .column{
+    width: 220px;
+    padding-bottom: 20px;
+}
+
+.competences .titreOutils .traitvertical{
+
+    padding-top: 50px;
+    height: 30px;
+    width: 2px;
+    background-color: rgb(184, 67, 46);
+    margin : -3px auto;
+
+}
+.competences .titreOutils {
+    
+    
+    display: flex;
+    justify-content: center;
+    
+}
+
+.competences .titreOutils .column{
+    width: 100px;
+    
+}
+
+.competences h1
+{
+    text-align: center;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+   
+}
+
+.competences h2
+{
+    text-align: center;
+   
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+   
+}
+
+.competences .trait
+{
+    
+    height: 2px;
+    width: 320px;
+    background-color: white;
+    margin : -3px auto;
+}
+
+.competences .langages .column{
+    width: 250px;
+    padding-bottom : 20px;
+}
+
+.competences .langages {
+    margin: 10%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.competences i
+{
+   
+    font-size: 200px;  
+}
+
+.competences .langages .first img{
+    padding-top: 50px;
+    padding-right: 50px;
+    width : 300px;
+    height: auto;
+}
+
+.competences .langages .fourth img{
+    padding-top: 50px;
+    padding-left : 45px;
+    width : 200px;
+    height: auto;
+}
+
+
+
+
+/* Projets */
+
+.projets{
+    
+    padding-bottom: 20px;
+    color: white;
+    margin: 40px;
+}
+.projets h1
+{
+    text-align: center;
+   
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    padding-bottom: 20px;   
+}
+
+.projets .trait
+{
+    height: 2px;
+    width: 200px;
+    background-color: white;
+    margin : -3px auto;
+}
+
+.projets .images {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.projets .images img {
+    width: 300px;
+    height: auto;
+}
+
+.projets .images .column{
+    width: 320px;
+    padding-bottom: 20px;
+}
+
+.projets .images p
+{
+    padding-bottom: 20px;
+}
+
+.projets .second p
+{
+    padding-bottom: 0px;
+}
+.projets .images a 
+{   
+   
+    padding: 5px 25px;  
+    color : gray;
+    background:  rgb(49, 49, 49);
+    letter-spacing: 2px;
+    font-size: 18px;
+    transition: 0.6s;     
+}
+
+.projets .images a:hover 
+{   
+    color : rgba(255, 255, 255, 1); 
+    background: rgb(184, 67, 46);
+}
+
+.projets li 
+{   
+    list-style: none;
+    margin: 20px 0;
+}
+
+/* Contact */
+
+.contact{
+    
+    color: white;
+    margin: 70px;
+}
+.contact h1
+{
+    text-align: center;
+    
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    padding-bottom: 20px;   
+}
+
+.contact .trait
+{
+    height: 2px;
+    width: 190px;
+    background-color: white;
+    margin : -3px auto;
+}
+
+.contact .contactMe {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact .contactMe p{
+    padding-bottom: 5px;
+}
+
+.contact h3{
+    padding-top: 10px;
+}
+
+.contact a
+{   
+    color : #fff;
+    
+    transition: 0.5s;
+}
+
+.contact a:hover 
+{   
+    color : rgb(184, 67, 46); 
+    
+}
+
