@@ -356,6 +356,7 @@ padding-top: 90px;
 .competences .langages .column{
     width: 200px;
     padding-bottom : 20px;
+    align-content: center;
 }
 
 .competences .langages {
