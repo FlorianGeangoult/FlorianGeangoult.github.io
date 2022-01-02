@@ -1,4 +1,5 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Varela+Round&display=swap');
 
 html {
@@ -298,7 +299,7 @@ padding-top: 90px;
 
 .competences .titreCompetences .column{
     width: 220px;
-    padding-bottom: 20px;
+    
 }
 
 .competences .titreOutils .traitvertical{
@@ -353,13 +354,13 @@ padding-top: 90px;
 }
 
 .competences .langages .column{
-    width: 250px;
+    width: 200px;
     padding-bottom : 20px;
 }
 
 .competences .langages {
     margin: 10%;
-    padding-top: 50px;
+    
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -374,13 +375,13 @@ padding-top: 90px;
 
 .competences .langages .first img{
     padding-top: 50px;
-    padding-right: 50px;
+    padding-right: 120px;
     width : 300px;
     height: auto;
 }
 
 .competences .langages .fourth img{
-    padding-top: 50px;
+    
     padding-left : 45px;
     width : 200px;
     height: auto;
@@ -397,6 +398,15 @@ padding-top: 90px;
     color: white;
     margin: 40px;
 }
+
+.projets i{
+    
+    height: 100px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top-width: 20px;
+}
+
 .projets h1
 {
     text-align: center;
@@ -430,6 +440,13 @@ padding-top: 90px;
 .projets .images .column{
     width: 320px;
     padding-bottom: 20px;
+}
+
+.projets .images .column .first h2{
+    
+    margin-bottom: 40px;
+    padding-bottom: 40px;;
+    height: 100px;
 }
 
 .projets .images p
