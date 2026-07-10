@@ -929,7 +929,7 @@ section {
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.88);
-    padding: 56px 16px;
+    padding: 40px 12px;
 }
 
     .lightbox.open {
@@ -945,17 +945,17 @@ section {
 
     .lightbox img,
     .lightbox video {
-        max-width: min(1100px, 92vw);
-        max-height: 82vh;
+        max-width: min(1560px, 95vw);
+        max-height: 88vh;
         border-radius: var(--radius);
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
         user-select: none;
     }
 
     .lightbox iframe {
-        width: min(1100px, 92vw);
+        width: min(1560px, 95vw);
         aspect-ratio: 16 / 9;
-        max-height: 82vh;
+        max-height: 88vh;
         border: none;
         border-radius: var(--radius);
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
@@ -997,6 +997,28 @@ section {
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.lb-prev, .lb-next {
+    width: 68px;
+    height: 68px;
+    font-size: 38px;
+}
+
+@media (max-width: 640px) {
+    .lb-prev, .lb-next {
+        width: 48px;
+        height: 48px;
+        font-size: 28px;
+    }
+
+    .lb-prev {
+        left: 8px;
+    }
+
+    .lb-next {
+        right: 8px;
+    }
 }
 
 .lb-counter {
