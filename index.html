@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florian Geangoult — Portfolio</title>
+    <meta name="description" content="Portfolio de Florian Geangoult, développeur logiciel et jeu vidéo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#intro" class="logo">Portfolio</a>
+            <ul class="menu" id="navMenu">
+                <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="#presentation" data-i18n="nav.about">À propos</a></li>
+                <li><a href="#competences" data-i18n="nav.skills">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="lang-toggle" id="langToggle" aria-label="Changer de langue / Switch language">EN</button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème" data-i18n-aria="aria.theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" data-i18n-aria="aria.menu" aria-expanded="false" aria-controls="navMenu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="intro" id="intro">
+        <div class="hero-cells" aria-hidden="true">
+            <span class="cell c1"></span><span class="cell c2"></span><span class="cell c3"></span><span class="cell c4"></span>
+        </div>
+        <div class="container intro-inner">
+            <p class="intro-eyebrow" data-i18n="hero.eyebrow">Développeur logiciel &amp; jeu vidéo</p>
+            <h1 class="intro-title">Florian Geangoult</h1>
+            <p class="intro-sub" data-i18n="hero.sub">Je suis ingénieur informatique et développeur de jeux vidéo par passion.</p>
+            <div class="intro-actions">
+                <a class="btn btn-primary" href="CV_Florian_Geangoult.pdf" download id="cvLink" data-i18n="hero.cv">Télécharger le CV</a>
+                <a class="btn btn-ghost" href="#projets" data-i18n="hero.projects">Voir les projets</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="projets" id="projets">
+        <div class="container">
+            <div class="section-head reveal">
+                <h1 data-i18n="section.projects">Projets</h1>
+                <div class="trait"></div>
+            </div>
+            <div class="projects-grid">
+
+                <article class="card reveal">
+                    <!-- data-gallery : liste d'images séparées par | (la 1re sert de couverture si tile-bg absent). Un clic sur la tuile ouvre la galerie. -->
+                    <div class="card-tile t-valanya" data-gallery="valanya.png|valanya_2.png|valanya_gameplay.mp4"><img class="tile-bg" src="valanya.png" alt="Aperçu de Valanya" onerror="this.remove()"><i class="devicon-csharp-plain colored" aria-hidden="true"></i></div>
+                    <div class="card-body">
+                        <span class="badge" data-i18n="badge.wip">En développement</span>
+                        <div class="card-title"><h2>Valanya</h2></div>
+                        <p data-i18n="valanya.desc">MMORPG tactique au combat sur grille, développé sous Unity et C# avec Mirror pour le réseau. Système de sorts modulaire et data-driven, combat au tour par tour, et IA pilotée par arbres de comportement.</p>
+                        <!-- Bloc "Plus de détails" : à copier-coller dans les autres cartes si besoin -->
+                        <details class="card-details">
+                            <summary data-i18n="details.more">Plus de détails</summary>
+                            <ul>
+                                <li data-i18n="valanya.d1">Architecture serveur-autoritaire (Mirror) : déplacements sur grille et lancement de sorts validés côté serveur.</li>
+                                <li data-i18n="valanya.d2">Sorts définis en ScriptableObjects composables : zones d'effet, poussées, trajectoires, effets de statut et sorts multi-phases.</li>
+                                <li data-i18n="valanya.d3">Grille de combat rendue avec des Decal Projectors (URP) : portée, ligne de vue avec élévation, états de cellule.</li>
+                                <li data-i18n="valanya.d4">IA des ennemis pilotée par arbres de comportement, gestion des tours à l'initiative.</li>
+                                <li data-i18n="valanya.d5">Outillage éditeur custom (inspecteurs dédiés) pour créer et équilibrer les sorts rapidement.</li>
+                            </ul>
+                        </details>
+                        <div class="card-links"></div>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-tile t-neon" data-gallery="neonforest.png|neonforest_2.png"><img class="tile-bg" src="neonforest.png" alt="Aperçu de NeonForest" onerror="this.remove()"><i class="devicon-csharp-plain colored" aria-hidden="true"></i></div>
+                    <div class="card-body">
+                        <span class="badge leaf" data-i18n="badge.wip">En développement</span>
+                        <div class="card-title"><h2>NeonForest</h2></div>
+                        <p data-i18n="neon.desc">Jeu de simulation de ferme et de vie peuplé de grenouilles, dans la lignée de Stardew Valley. Développé sous Unity : cycle jour/nuit, PNJ avec déplacements en A*, système de craft, quêtes et évènements nocturnes.</p>
+                        <div class="card-links"></div>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-tile"><img class="tile-bg" src="bok.png" alt="Aperçu de Bok" onerror="this.remove()"><i class="devicon-csharp-plain colored" aria-hidden="true"></i></div>
+                    <div class="card-body">
+                        <div class="card-title"><h2 data-i18n="bok.title">Bok : Un prototype de text-based game</h2></div>
+                        <p data-i18n="bok.desc">Premier projet réalisé sur Unity, un jeu narratif humoristique où les choix du joueur affectent le déroulement des évènements.</p>
+                        <div class="card-links">
+                            <a href="https://github.com/FlorianGeangoult/BokTextBased/tree/master" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-tile"><img class="tile-bg" src="memory.png" alt="Aperçu de Jeu de Memory" onerror="this.remove()"><i class="devicon-csharp-plain colored" aria-hidden="true"></i></div>
+                    <div class="card-body">
+                        <div class="card-title"><h2 data-i18n="memory.title">Jeu de Memory</h2></div>
+                        <p data-i18n="memory.desc">Un jeu pour Android développé sur Unity qui consiste à retrouver des paires de cartes dans un jeu de cartes retournées, à difficulté et modes de jeu variables.</p>
+                        <div class="card-links">
+                            <a href="https://github.com/FlorianGeangoult/Memory/tree/master" target="_blank" rel="noopener">GitHub</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.Jangouz.Memory&hl=fr&gl=US" target="_blank" rel="noopener">Play Store</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-tile t-py"><i class="devicon-python-plain colored" aria-hidden="true"></i></div>
+                    <div class="card-body">
+                        <div class="card-title"><h2 data-i18n="reco.title">Algorithme de recommandation</h2></div>
+                        <p data-i18n="reco.desc">Système de recommandation qui estime des items qu'un utilisateur pourrait apprécier en fonction de sa similarité à d'autres utilisateurs.</p>
+                        <div class="card-links">
+                            <a href="https://github.com/FlorianGeangoult/Recommandation" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-tile t-web">
+                        <div class="tile-icons">
+                            <i class="devicon-php-plain colored" aria-hidden="true"></i>
+                            <i class="devicon-mysql-plain colored" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title"><h2 data-i18n="med.title">Gestion d'un cabinet médical</h2></div>
+                        <p data-i18n="med.desc">Site permettant l'ajout de patients, de médecins et de consultations, en relation avec une base de données pour traiter les informations relatives à la prise de rendez-vous.</p>
+                        <div class="card-links">
+                            <a href="https://github.com/EtouatiNaim/Projet-PHP" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-tile"><img class="tile-bg" src="ghost.png" alt="Aperçu de Ghost Stories" onerror="this.remove()"><i class="devicon-csharp-plain colored" aria-hidden="true"></i></div>
+                    <div class="card-body">
+                        <div class="card-title"><h2>Ghost Stories</h2></div>
+                        <p data-i18n="ghost.desc">Projet de clicker mobile suivant l'histoire de fantômes dans l'au-delà, développé sur Unity.</p>
+                        <div class="card-links">
+                            <a href="https://github.com/FlorianGeangoult/Recommandation" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="presentation" id="presentation">
+        <div class="container">
+            <div class="section-head reveal">
+                <h1 data-i18n="section.about">À propos</h1>
+                <div class="trait"></div>
+            </div>
+            <div class="about-grid reveal">
+                <div class="about-text">
+                    <h2 data-i18n="about.title">Je suis <span>Florian Geangoult</span></h2>
+                    <p data-i18n="about.p1">
+                        Développeur logiciel et jeu vidéo, titulaire d'un BAC+5 obtenu à <span>Polytech Lyon</span>. Au quotidien,
+                        je conçois et développe des projets de jeu vidéo dans un cadre associatif, tout en travaillant sur
+                        mes propres jeux sous <span>Unity</span> et <span>C#</span>.
+                    </p>
+                    <p data-i18n="about.p2">
+                        Le développement de jeux est le fil rouge de mes projets personnels : gameplay, architecture de systèmes modulaires,
+                        réseau, IA et outillage. Le développement logiciel et web restent des domaines qui m'intéressent tout autant,
+                        et que je continue d'explorer en parallèle.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="competences" id="competences">
+        <div class="container">
+            <div class="section-head reveal">
+                <h1 data-i18n="section.skills">Compétences</h1>
+                <div class="trait"></div>
+            </div>
+
+            <div class="skill-group reveal">
+                <h2 data-i18n="skills.langs">Langages de programmation</h2>
+                <div class="group-rule"></div>
+                <div class="skill-grid">
+                    <div class="skill"><i class="devicon-java-plain colored" aria-hidden="true"></i><span class="label">Java</span></div>
+                    <div class="skill"><i class="devicon-csharp-plain colored" aria-hidden="true"></i><span class="label">C#</span></div>
+                    <div class="skill"><i class="devicon-c-plain colored" aria-hidden="true"></i><span class="label">C</span></div>
+                    <div class="skill"><i class="devicon-python-plain colored" aria-hidden="true"></i><span class="label">Python</span></div>
+                    <div class="skill"><i class="devicon-php-plain colored" aria-hidden="true"></i><span class="label">PHP</span></div>
+                    <div class="skill"><i class="devicon-html5-plain colored" aria-hidden="true"></i><span class="label">HTML5</span></div>
+                    <div class="skill"><i class="devicon-css3-plain colored" aria-hidden="true"></i><span class="label">CSS3</span></div>
+                    <div class="skill"><i class="devicon-mysql-plain colored" aria-hidden="true"></i><span class="label">MySQL</span></div>
+                </div>
+            </div>
+
+            <div class="skill-group reveal">
+                <h2 data-i18n="skills.tools">Frameworks &amp; outils</h2>
+                <div class="group-rule"></div>
+                <div class="skill-grid">
+                    <div class="skill"><i class="devicon-spring-plain colored" aria-hidden="true"></i><span class="label">Spring Boot</span></div>
+                    <div class="skill">
+                        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true">
+                            <polygon points="12 2.5 20.5 7 20.5 17 12 21.5 3.5 17 3.5 7"></polygon>
+                            <polygon points="12 7 16 9.5 16 14.5 12 17 8 14.5 8 9.5"></polygon>
+                        </svg>
+                        <span class="label">Unity</span>
+                    </div>
+                    <div class="skill"><i class="devicon-git-plain colored" aria-hidden="true"></i><span class="label">Git</span></div>
+                    <div class="skill"><i class="devicon-vscode-plain colored" aria-hidden="true"></i><span class="label">VS Code</span></div>
+                    <div class="skill"><i class="devicon-github-original" aria-hidden="true"></i><span class="label">GitHub</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-head reveal">
+                <h1>Contact</h1>
+                <div class="trait"></div>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-info reveal">
+                    <div class="contact-card">
+                        <h3>LinkedIn</h3>
+                        <p><a href="https://www.linkedin.com/in/florian-geangoult-b936b31b6/" target="_blank" rel="noopener">linkedin.com/in/florian-geangoult</a></p>
+                        <h3>Email</h3>
+                        <p><a href="mailto:flogeangoult@orange.fr">flogeangoult@orange.fr</a></p>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+                    <div class="field">
+                        <label for="cf-name" data-i18n="form.name">Nom</label>
+                        <input id="cf-name" name="name" type="text" required autocomplete="name">
+                    </div>
+                    <div class="field">
+                        <label for="cf-email">Email</label>
+                        <input id="cf-email" name="email" type="email" required autocomplete="email">
+                    </div>
+                    <div class="field">
+                        <label for="cf-message">Message</label>
+                        <textarea id="cf-message" name="message" rows="5" required></textarea>
+                    </div>
+                    <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <button type="submit" class="btn btn-primary" id="cf-submit" data-i18n="form.send">Envoyer</button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie d'images" data-i18n-aria="aria.lightbox">
+        <button class="lb-close" id="lbClose" aria-label="Fermer" data-i18n-aria="aria.close">✕</button>
+        <button class="lb-prev" id="lbPrev" aria-label="Média précédent" data-i18n-aria="aria.prev">‹</button>
+        <div class="lb-media" id="lbMedia"></div>
+        <button class="lb-next" id="lbNext" aria-label="Média suivant" data-i18n-aria="aria.next">›</button>
+        <span class="lb-counter" id="lbCounter"></span>
+    </div>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Florian Geangoult</p>
+    </footer>
+
+    <script>
+        // ---- Theme (best-effort persistence) ----
+        const root = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        let stored = null;
+        try { stored = localStorage.getItem('theme'); } catch (e) { }
+        const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        if (stored === 'light' || (!stored && prefersLight)) root.setAttribute('data-theme', 'light');
+        themeToggle.addEventListener('click', () => {
+            const light = root.getAttribute('data-theme') === 'light';
+            if (light) root.removeAttribute('data-theme'); else root.setAttribute('data-theme', 'light');
+            try { localStorage.setItem('theme', light ? 'dark' : 'light'); } catch (e) { }
+        });
+
+        // ---- Mobile menu ----
+        const navToggle = document.getElementById('navToggle');
+        const menu = document.getElementById('navMenu');
+        navToggle.addEventListener('click', () => {
+            const open = menu.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', open);
+        });
+        menu.querySelectorAll('a').forEach(a =>
+            a.addEventListener('click', () => { menu.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); })
+        );
+
+        // ---- Navbar background + hide-on-scroll-down ----
+        const navbar = document.getElementById('navbar');
+        let lastY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const y = window.scrollY;
+            navbar.classList.toggle('scrolled', y > 40);
+            navbar.classList.toggle('hidden', y > lastY && y > 200 && !menu.classList.contains('open'));
+            lastY = y;
+        }, { passive: true });
+
+        // ---- Reveal on scroll ----
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+        // ---- Contact form ----
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+        const submitBtn = document.getElementById('cf-submit');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!form.checkValidity()) {
+                status.textContent = t('form.invalid');
+                status.className = 'form-status err';
+                return;
+            }
+            if (form.action.includes('your-form-id')) {
+                status.textContent = t('form.unconfigured');
+                status.className = 'form-status err';
+                return;
+            }
+            submitBtn.disabled = true;
+            status.textContent = t('form.sending');
+            status.className = 'form-status';
+            try {
+                const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+                if (res.ok) { form.reset(); status.textContent = t('form.sent'); status.className = 'form-status ok'; }
+                else { throw new Error('Request failed'); }
+            } catch (err) {
+                status.textContent = t('form.fail');
+                status.className = 'form-status err';
+            } finally { submitBtn.disabled = false; }
+        });
+
+        // ---- Footer year ----
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ---- Galerie / Lightbox ----
+        // Pour ajouter une galerie à un projet : data-gallery="img1.png|clip.mp4|https://youtu.be/XXXX|img2.png" sur sa .card-tile
+        // Accepte : images, vidéos locales (.mp4 / .webm / .ogg) et liens YouTube (watch?v= ou youtu.be)
+        const lightbox = document.getElementById('lightbox');
+        const lbMedia = document.getElementById('lbMedia');
+        const lbCounter = document.getElementById('lbCounter');
+        let lbItems = [];
+        let lbIndex = 0;
+        let lbAlt = '';
+
+        function lbIsVideo(src) {
+            return /\.(mp4|webm|ogg)(\?.*)?$/i.test(src) || /youtube\.com\/watch|youtu\.be\//.test(src);
+        }
+
+        function lbRender(src) {
+            lbMedia.innerHTML = ''; // vide le conteneur (stoppe aussi une vidéo en cours)
+            let el;
+            const yt = src.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/);
+            if (yt) {
+                el = document.createElement('iframe');
+                el.src = 'https://www.youtube.com/embed/' + yt[1];
+                el.title = lbAlt || 'Vidéo';
+                el.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                el.allowFullscreen = true;
+            } else if (/\.(mp4|webm|ogg)(\?.*)?$/i.test(src)) {
+                el = document.createElement('video');
+                el.src = src;
+                el.controls = true;
+                el.playsInline = true;
+            } else {
+                el = document.createElement('img');
+                el.src = src;
+                el.alt = lbAlt;
+            }
+            lbMedia.appendChild(el);
+        }
+
+        function lbShow(i) {
+            lbIndex = (i + lbItems.length) % lbItems.length;
+            lbRender(lbItems[lbIndex]);
+            lbCounter.textContent = (lbIndex + 1) + ' / ' + lbItems.length;
+            const single = lbItems.length < 2;
+            document.getElementById('lbPrev').style.display = single ? 'none' : '';
+            document.getElementById('lbNext').style.display = single ? 'none' : '';
+        }
+        function lbOpen(items, alt) {
+            lbItems = items;
+            lbAlt = alt || '';
+            lbShow(0);
+            lightbox.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function lbClose() {
+            lightbox.classList.remove('open');
+            lbMedia.innerHTML = '';
+            document.body.style.overflow = '';
+        }
+
+        document.querySelectorAll('.card-tile[data-gallery]').forEach(tile => {
+            const items = tile.dataset.gallery.split('|').map(s => s.trim()).filter(Boolean);
+            if (!items.length) return;
+            // Badge avec le nombre de médias (🎬 si la galerie contient au moins une vidéo)
+            if (items.length > 1 || lbIsVideo(items[0])) {
+                const badge = document.createElement('span');
+                badge.className = 'tile-count';
+                badge.textContent = items.length + (items.some(lbIsVideo) ? ' 🎬' : ' 📷');
+                tile.appendChild(badge);
+            }
+            tile.setAttribute('role', 'button');
+            tile.setAttribute('tabindex', '0');
+            tile.setAttribute('data-i18n-aria', 'aria.tile');
+            const altText = tile.querySelector('.tile-bg')?.alt || '';
+            tile.addEventListener('click', () => lbOpen(items, altText));
+            tile.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); lbOpen(items, altText); }
+            });
+        });
+
+        document.getElementById('lbClose').addEventListener('click', lbClose);
+        document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); lbShow(lbIndex - 1); });
+        document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); lbShow(lbIndex + 1); });
+        lightbox.addEventListener('click', e => { if (e.target === lightbox) lbClose(); });
+        document.addEventListener('keydown', e => {
+            if (!lightbox.classList.contains('open')) return;
+            if (e.key === 'Escape') lbClose();
+            if (e.key === 'ArrowLeft') lbShow(lbIndex - 1);
+            if (e.key === 'ArrowRight') lbShow(lbIndex + 1);
+        });
+
+        // ---- Langue FR / EN ----
+        // Les textes marqués data-i18n (contenu) et data-i18n-aria (aria-label) sont traduits via ce dictionnaire.
+        const I18N = {
+            fr: {
+                'meta.desc': "Portfolio de Florian Geangoult, développeur logiciel et jeu vidéo.",
+                'cv.file': 'CV_Florian_Geangoult.pdf',
+                'nav.projects': 'Projets', 'nav.about': 'À propos', 'nav.skills': 'Compétences',
+                'hero.eyebrow': 'Développeur logiciel &amp; jeu vidéo',
+                'hero.sub': 'Je suis ingénieur informatique et développeur de jeux vidéo par passion.',
+                'hero.cv': 'Télécharger le CV', 'hero.projects': 'Voir les projets',
+                'section.projects': 'Projets', 'section.about': 'À propos', 'section.skills': 'Compétences',
+                'badge.wip': 'En développement', 'details.more': 'Plus de détails',
+                'valanya.desc': "MMORPG tactique au combat sur grille, développé sous Unity et C# avec Mirror pour le réseau. Système de sorts modulaire et data-driven, combat au tour par tour, et IA pilotée par arbres de comportement.",
+                'valanya.d1': "Architecture serveur-autoritaire (Mirror) : déplacements sur grille et lancement de sorts validés côté serveur.",
+                'valanya.d2': "Sorts définis en ScriptableObjects composables : zones d'effet, poussées, trajectoires, effets de statut et sorts multi-phases.",
+                'valanya.d3': "Grille de combat rendue avec des Decal Projectors (URP) : portée, ligne de vue avec élévation, états de cellule.",
+                'valanya.d4': "IA des ennemis pilotée par arbres de comportement, gestion des tours à l'initiative.",
+                'valanya.d5': "Outillage éditeur custom (inspecteurs dédiés) pour créer et équilibrer les sorts rapidement.",
+                'neon.desc': "Jeu de simulation de ferme et de vie peuplé de grenouilles, dans la lignée de Stardew Valley. Développé sous Unity : cycle jour/nuit, PNJ avec déplacements en A*, système de craft, quêtes et évènements nocturnes.",
+                'bok.title': 'Bok : Un prototype de text-based game',
+                'bok.desc': "Premier projet réalisé sur Unity, un jeu narratif humoristique où les choix du joueur affectent le déroulement des évènements.",
+                'memory.title': 'Jeu de Memory',
+                'memory.desc': "Un jeu pour Android développé sur Unity qui consiste à retrouver des paires de cartes dans un jeu de cartes retournées, à difficulté et modes de jeu variables.",
+                'reco.title': 'Algorithme de recommandation',
+                'reco.desc': "Système de recommandation qui estime des items qu'un utilisateur pourrait apprécier en fonction de sa similarité à d'autres utilisateurs.",
+                'med.title': "Gestion d'un cabinet médical",
+                'med.desc': "Site permettant l'ajout de patients, de médecins et de consultations, en relation avec une base de données pour traiter les informations relatives à la prise de rendez-vous.",
+                'ghost.desc': "Projet de clicker mobile suivant l'histoire de fantômes dans l'au-delà, développé sur Unity.",
+                'about.title': 'Je suis <span>Florian Geangoult</span>',
+                'about.p1': "Développeur logiciel et jeu vidéo, titulaire d'un BAC+5 obtenu à <span>Polytech Lyon</span>. Au quotidien, je conçois et développe des projets de jeu vidéo dans un cadre associatif, tout en travaillant sur mes propres jeux sous <span>Unity</span> et <span>C#</span>.",
+                'about.p2': "Le développement de jeux est le fil rouge de mes projets personnels : gameplay, architecture de systèmes modulaires, réseau, IA et outillage. Le développement logiciel et web restent des domaines qui m'intéressent tout autant, et que je continue d'explorer en parallèle.",
+                'skills.langs': 'Langages de programmation', 'skills.tools': 'Frameworks &amp; outils',
+                'form.name': 'Nom', 'form.send': 'Envoyer',
+                'form.invalid': 'Merci de remplir tous les champs correctement.',
+                'form.unconfigured': 'Formulaire en attente de configuration (voir le code).',
+                'form.sending': 'Envoi en cours…',
+                'form.sent': 'Message envoyé, merci !',
+                'form.fail': "L'envoi a échoué. Réessayez ou écrivez-moi par email.",
+                'aria.theme': 'Changer de thème', 'aria.menu': 'Ouvrir le menu',
+                'aria.lightbox': "Galerie d'images", 'aria.close': 'Fermer',
+                'aria.prev': 'Média précédent', 'aria.next': 'Média suivant',
+                'aria.tile': 'Voir les médias du projet'
+            },
+            en: {
+                'meta.desc': 'Portfolio of Florian Geangoult, software and video game developer.',
+                'cv.file': 'CV_Florian_Geangoult_EN.pdf',
+                'nav.projects': 'Projects', 'nav.about': 'About', 'nav.skills': 'Skills',
+                'hero.eyebrow': 'Software &amp; game developer',
+                'hero.sub': "I'm a software engineer and a passionate game developer.",
+                'hero.cv': 'Download my resume', 'hero.projects': 'View projects',
+                'section.projects': 'Projects', 'section.about': 'About me', 'section.skills': 'Skills',
+                'badge.wip': 'In development', 'details.more': 'More details',
+                'valanya.desc': 'Tactical MMORPG with grid-based combat, built with Unity and C# using Mirror for networking. Modular data-driven spell system, turn-based combat, and AI driven by behavior trees.',
+                'valanya.d1': 'Server-authoritative architecture (Mirror): grid movement and spell casting validated server-side.',
+                'valanya.d2': 'Spells defined as composable ScriptableObjects: areas of effect, pushes, trajectories, status effects and multi-phase spells.',
+                'valanya.d3': 'Combat grid rendered with Decal Projectors (URP): range, elevation-aware line of sight, cell states.',
+                'valanya.d4': 'Enemy AI driven by behavior trees, initiative-based turn management.',
+                'valanya.d5': 'Custom editor tooling (dedicated inspectors) to create and balance spells quickly.',
+                'neon.desc': 'A farming and life simulation game populated by frogs, in the vein of Stardew Valley. Built with Unity: day/night cycle, NPCs with A* pathfinding, crafting, quests and night events.',
+                'bok.title': 'Bok: a text-based game prototype',
+                'bok.desc': "My first Unity project, a humorous narrative game where the player's choices affect how events unfold.",
+                'memory.title': 'Memory game',
+                'memory.desc': 'An Android game built with Unity where you match pairs of face-down cards, with adjustable difficulty and game modes.',
+                'reco.title': 'Recommendation algorithm',
+                'reco.desc': 'A recommender system that estimates items a user might enjoy based on their similarity to other users.',
+                'med.title': 'Medical practice management',
+                'med.desc': 'A website for managing patients, doctors and consultations, backed by a database handling appointment booking data.',
+                'ghost.desc': 'A mobile clicker project following the story of ghosts in the afterlife, built with Unity.',
+                'about.title': "I'm <span>Florian Geangoult</span>",
+                'about.p1': 'Software and game developer, with a Master\'s-level engineering degree from <span>Polytech Lyon</span>. Day to day, I design and build video game projects within a non-profit team, while working on my own games with <span>Unity</span> and <span>C#</span>.',
+                'about.p2': 'Game development is the common thread of my personal projects: gameplay, modular system architecture, networking, AI and tooling. Software and web development remain fields I enjoy just as much, and keep exploring alongside.',
+                'skills.langs': 'Programming languages', 'skills.tools': 'Frameworks &amp; tools',
+                'form.name': 'Name', 'form.send': 'Send',
+                'form.invalid': 'Please fill in all fields correctly.',
+                'form.unconfigured': 'Form not configured yet (see code).',
+                'form.sending': 'Sending…',
+                'form.sent': 'Message sent, thank you!',
+                'form.fail': 'Sending failed. Try again or email me directly.',
+                'aria.theme': 'Toggle theme', 'aria.menu': 'Open menu',
+                'aria.lightbox': 'Image gallery', 'aria.close': 'Close',
+                'aria.prev': 'Previous media', 'aria.next': 'Next media',
+                'aria.tile': "View this project's media"
+            }
+        };
+
+        let lang = 'fr';
+        try { lang = localStorage.getItem('lang') || 'fr'; } catch (e) { }
+        if (!I18N[lang]) lang = 'fr';
+        const t = key => I18N[lang][key] ?? I18N.fr[key] ?? key;
+
+        const langToggle = document.getElementById('langToggle');
+        const cvLink = document.getElementById('cvLink');
+
+        function applyLang() {
+            document.documentElement.lang = lang;
+            const md = document.querySelector('meta[name="description"]');
+            if (md) md.setAttribute('content', t('meta.desc'));
+            document.querySelectorAll('[data-i18n]').forEach(el => { el.innerHTML = t(el.dataset.i18n); });
+            document.querySelectorAll('[data-i18n-aria]').forEach(el => { el.setAttribute('aria-label', t(el.dataset.i18nAria)); });
+            cvLink.setAttribute('href', t('cv.file'));
+            langToggle.textContent = lang === 'fr' ? 'EN' : 'FR';
+        }
+
+        langToggle.addEventListener('click', () => {
+            lang = lang === 'fr' ? 'en' : 'fr';
+            try { localStorage.setItem('lang', lang); } catch (e) { }
+            applyLang();
+        });
+
+        applyLang();
+    </script>
+
+</body>
+</html>
